@@ -58,7 +58,7 @@ export default function Navbar() {
             <button
               onClick={toggleMenu}
               className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-green-600 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
-              aria-expanded="false"
+              aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
               {!isMenuOpen ? (
