@@ -15,16 +15,20 @@ import { useState } from "react";
 export function NavbarDemo() {
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "Home",
+      link: "/",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: "Blog",
+      link: "/blog",
+    },
+    {
+      name: "About",
+      link: "/about",
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "/contact",
     },
   ];
 
@@ -38,7 +42,7 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="primary">Contact Me</NavbarButton>
+            <NavbarButton variant="primary" href="/contact">Contact Me</NavbarButton>
           </div>
         </NavBody>
 
@@ -71,6 +75,7 @@ export function NavbarDemo() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
+                href="/contact"
               >
                 Contact Me
               </NavbarButton>
