@@ -1,83 +1,82 @@
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Calendar, User } from "lucide-react"
+import { ArrowRight, BookOpen, Users, TrendingUp } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img src="/blog-workspace-background.png" alt="Hero background" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
+    <section className="relative bg-background py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                Insights That <span className="text-primary">Transform</span> Your Perspective
+              </h1>
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+                Discover thought-provoking articles, expert insights, and actionable strategies that help you navigate
+                the complexities of modern business and life.
+              </p>
+            </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-        {/* Featured Badge */}
-        <Badge variant="secondary" className="mb-6 bg-accent/20 text-accent-foreground border-accent/30">
-          Featured Article
-        </Badge>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="text-base px-8 py-3">
+                Start Reading
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button variant="outline" size="lg" className="text-base px-8 py-3 bg-transparent">
+                Subscribe to Newsletter
+              </Button>
+            </div>
 
-        {/* Main Heading */}
-        <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          Discover Stories That
-          <span className="block text-accent">Inspire & Inform</span>
-        </h1>
-
-        {/* Subheading */}
-        <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
-          Dive into our curated collection of insights, tutorials, and thought-provoking articles crafted by industry
-          experts and passionate writers.
-        </p>
-
-        {/* Article Meta */}
-        <div className="flex items-center justify-center gap-6 mb-8 text-gray-300">
-          <div className="flex items-center gap-2">
-            <User className="w-4 h-4" />
-            <span>Sarah Johnson</span>
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
+              <div className="text-center sm:text-left">
+                <div className="flex items-center justify-center sm:justify-start mb-2">
+                  <BookOpen className="h-5 w-5 text-primary mr-2" />
+                  <span className="text-2xl font-bold text-foreground">500+</span>
+                </div>
+                <p className="text-sm text-muted-foreground">Articles Published</p>
+              </div>
+              <div className="text-center sm:text-left">
+                <div className="flex items-center justify-center sm:justify-start mb-2">
+                  <Users className="h-5 w-5 text-primary mr-2" />
+                  <span className="text-2xl font-bold text-foreground">50K+</span>
+                </div>
+                <p className="text-sm text-muted-foreground">Monthly Readers</p>
+              </div>
+              <div className="text-center sm:text-left">
+                <div className="flex items-center justify-center sm:justify-start mb-2">
+                  <TrendingUp className="h-5 w-5 text-primary mr-2" />
+                  <span className="text-2xl font-bold text-foreground">95%</span>
+                </div>
+                <p className="text-sm text-muted-foreground">Reader Satisfaction</p>
+              </div>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4" />
-            <span>Dec 15, 2024</span>
+
+          {/* Visual Element */}
+          <div className="relative">
+            <div className="relative bg-card rounded-2xl p-8 shadow-lg">
+              <img
+                src="/blog-workspace-background.png"
+                alt="Professional blog illustration"
+                className="w-full h-auto rounded-lg"
+              />
+
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                Latest Post
+              </div>
+
+              <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                Trending Now
+              </div>
+            </div>
+
+            {/* Background Decoration */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl -z-10 transform rotate-3"></div>
           </div>
-        </div>
-
-        {/* Call-to-Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-            Read Featured Article
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-white/30 text-white hover:bg-white/10 px-8 py-3 bg-transparent"
-          >
-            Browse All Posts
-          </Button>
-        </div>
-
-        {/* Navigation Links */}
-        <div className="mt-12 flex flex-wrap justify-center gap-6 text-sm">
-          <a href="#" className="text-secondary hover:text-accent transition-colors">
-            Technology
-          </a>
-          <a href="#" className="text-secondary hover:text-accent transition-colors">
-            Design
-          </a>
-          <a href="#" className="text-secondary hover:text-accent transition-colors">
-            Business
-          </a>
-          <a href="#" className="text-secondary hover:text-accent transition-colors">
-            Lifestyle
-          </a>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce" />
         </div>
       </div>
     </section>
