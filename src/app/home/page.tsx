@@ -67,18 +67,6 @@ function LaptopCard({
       <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-black border-2 border-neutral-700">
         {/* Laptop screen bezel */}
         <div className="absolute inset-2 overflow-hidden rounded-lg bg-black">
-          {/* <LazyVideo
-            src={
-              videoSrc ??
-              "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b0f3222371106db366a14ca1c29cef55-1b1EWVSa4w3FL2zslcaCGYTy9vcxjF.mp4"
-            }
-            className="absolute inset-0 h-full w-full object-cover"
-            autoplay={true}
-            loop={true}
-            muted={true}
-            playsInline={true}
-            aria-label={`${title} - ${sub}`}
-          /> */}
 
           {/* Content overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
