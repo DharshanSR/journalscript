@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { NavbarDemo } from "@/components/AppNavbar";
-import { Footer } from "@/components/Footer";
+import Plasma from "@/components/plasma";
+// import { NavbarDemo } from "@/components/AppNavbar";
+// import { Footer } from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "JournalScript - Modern Blog Platform",
@@ -29,14 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NavbarDemo />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+      <body>
+        <div className="fixed inset-0 z-0 bg-black">
+          <Plasma color="#8b5cf6" speed={0.8} direction="forward" scale={1.5} opacity={0.4} mouseInteractive={true} />
+        </div>
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );
