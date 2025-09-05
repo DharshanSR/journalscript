@@ -4,7 +4,7 @@ import Image from "next/image"
 export function Hero() {
   const buttonNew = (
     <Button asChild className="rounded-full bg-lime-400 px-6 text-black hover:bg-lime-300">
-      <a href="#newsletter">Subscribe Now</a>
+      <a href="#newsletter">Start Journaling</a>
     </Button>
   )
 
@@ -13,13 +13,13 @@ export function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center py-14 sm:py-20">
           <div className="mb-5 flex items-center gap-2">
-            <Image src="/icons/skitbit-white.svg" alt="TechInsights logo" width={32} height={32} className="h-8 w-8" />
-            <p className="text-sm uppercase tracking-[0.25em] text-lime-300/80">techinsights</p>
+            <Image src="/jouralscript-header.svg" alt="Journal Script logo" width={32} height={32} className="h-8 w-8" />
+            <p className="text-sm uppercase tracking-[0.25em] text-lime-300/80">journal script</p>
           </div>
           <h1 className="mt-3 text-center text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-            <span className="block">MODERN</span>
-            <span className="block text-lime-300 drop-shadow-[0_0_20px_rgba(132,204,22,0.35)]">TECH INSIGHTS</span>
-            <span className="block">FOR DEVELOPERS</span>
+            <span className="block">YOUR</span>
+            <span className="block text-lime-300 drop-shadow-[0_0_20px_rgba(132,204,22,0.35)]">CREATIVE JOURNAL</span>
+            <span className="block">STARTS HERE</span>
           </h1>
           <div className="mt-6">{buttonNew}</div>
 
@@ -50,8 +50,8 @@ export function Hero() {
 }
 
 function LaptopCard({
-  title = "AI",
-  sub = "Latest insights on artificial intelligence",
+  title = "Personal Growth",
+  sub = "Latest insights on personal development and self-reflection",
   tone = "trending",
   gradient = "from-[#0f172a] via-[#14532d] to-[#052e16]",
   videoSrc,
@@ -74,7 +74,7 @@ function LaptopCard({
             <div className="text-lg font-bold leading-tight text-white/95">{title}</div>
             <p className="text-xs text-white/70 line-clamp-2">{sub}</p>
             <div className="mt-2 inline-flex items-center rounded-full bg-black/60 px-2 py-0.5 text-[9px] uppercase tracking-wider text-lime-300">
-              {tone === "trending" ? "tech blog" : tone}
+              {tone === "trending" ? "journal topic" : tone}
             </div>
           </div>
         </div>
@@ -136,37 +136,37 @@ function LaptopCard({
 
 const blogTopicData = [
   {
-    title: "AI & Machine Learning",
-    sub: "Deep learning, neural networks, and AI breakthroughs transforming industries",
+    title: "Personal Growth",
+    sub: "Self-reflection, goal setting, and mindfulness practices for personal development",
     tone: "trending",
     gradient: "from-[#0b0b0b] via-[#0f172a] to-[#020617]",
     videoSrc:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/A%20new%20chapter%20in%20the%20story%20of%20success.__Introducing%20the%20new%20TAG%20Heuer%20Carrera%20Day-Date%20collection%2C%20reimagined%20with%20bold%20colors%2C%20refined%20finishes%2C%20and%20upgraded%20functionality%20to%20keep%20you%20focused%20on%20your%20goals.%20__Six%20-nDNoRQyFaZ8oaaoty4XaQz8W8E5bqA.mp4",
   },
   {
-    title: "Web Development",
-    sub: "Modern frameworks, tools, and best practices for building scalable web applications",
-    tone: "development",
+    title: "Creative Writing",
+    sub: "Story prompts, writing techniques, and inspiration for your creative journey",
+    tone: "creative",
     gradient: "from-[#0b1a0b] via-[#052e16] to-[#022c22]",
   },
   {
-    title: "Mobile Development",
-    sub: "iOS, Android, React Native, and cross-platform development insights",
-    tone: "mobile",
+    title: "Daily Reflections",
+    sub: "Gratitude practices, mood tracking, and daily mindfulness exercises",
+    tone: "wellness",
     gradient: "from-[#001028] via-[#0b355e] to-[#052e5e]",
     videoSrc:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Timeline%201-Ku3Y2Hgaw8hCiFEFg1ELtYp631rSzR.webm",
   },
   {
-    title: "Cloud & DevOps",
-    sub: "Infrastructure, deployment strategies, and cloud-native development practices",
-    tone: "cloud",
+    title: "Goal Planning",
+    sub: "Vision boards, milestone tracking, and strategies for achieving your dreams",
+    tone: "planning",
     gradient: "from-[#0b0b0b] via-[#1f2937] to-[#0b1220]",
   },
   {
-    title: "Cybersecurity",
-    sub: "Security best practices, threat analysis, and protecting digital assets",
-    tone: "security",
+    title: "Life Events",
+    sub: "Capturing memories, celebrating milestones, and documenting life's journey",
+    tone: "memories",
     gradient: "from-[#0b0b0b] via-[#111827] to-[#052e16]",
   },
 ]
